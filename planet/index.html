@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planet NEBULORA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Trebuchet MS', sans-serif;
+      color: white;
+      background: radial-gradient(circle at top left, #1a0033, #000010 60%, #2a0066);
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(20, 0, 40, 0.8);
+      padding: 15px 0;
+      box-shadow: 0 3px 15px #a020f0;
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #f08fff;
+      text-shadow: 0 0 15px #ff00ff;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #7f00ff, #e100ff);
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background: linear-gradient(90deg, #00ffe0, #00bfff);
+      color: black;
+      box-shadow: 0 0 10px cyan;
+      transform: scale(1.1);
+    }
+
+    section {
+      max-width: 850px;
+      margin: 80px auto;
+      padding: 40px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 20px #5e00ff;
+      text-align: left;
+      animation: fadeIn 1.5s ease;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #00ffff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    section p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 16px;
+      box-shadow: inset 0 0 10px #8000ff;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #bbbbbb;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #ff00ff, #00ffff);
+      color: black;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: linear-gradient(90deg, #00ffcc, #00bfff);
+      transform: scale(1.05);
+      color: black;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    footer {
+      background: rgba(10, 0, 20, 0.8);
+      color: #ff80ff;
+      padding: 15px;
+      font-size: 14px;
+      text-align: center;
+      box-shadow: 0 -2px 10px #a020f0;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌌 Planet NEBULORA 🌌</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#creatures">Creatures</a>
+      <a href="#energy">Energy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Planet NEBULORA</h2>
+    <p>
+      Hidden within a spiral galaxy, Planet NEBULORA radiates waves of starlight through its glassy surface. 
+      The planet’s atmosphere constantly shifts in color — from deep indigo to rose pink — creating an endless cosmic dance. 
+      Nebulora orbits two suns, giving it twin shadows that move in opposite directions.
+    </p>
+  </section>
+
+  <section id="creatures">
+    <h2>Life on NEBULORA</h2>
+    <p>
+      The Nebulorans are beings of light and mist, capable of morphing into any shape their energy desires. 
+      They communicate through harmonic frequencies that resonate across the planet, glowing brighter when they feel emotion.
+    </p>
+  </section>
+
+  <section id="energy">
+    <h2>Energy and Civilization</h2>
+    <p>
+      Nebulora thrives on “Spectra Energy,” a rare force that flows from the planet’s twin cores. 
+      It powers the floating crystalline cities suspended above vast magnetic oceans, where every structure hums with radiant light.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact the Nebuloran Council</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Starlink Email" required>
+      <textarea rows="4" placeholder="Message to the Council" required></textarea>
+      <button type="submit">Send Light Message 💫</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 3025 Planet NEBULORA | Powered by Spectra Energy ⚡</p>
+  </footer>
+
+</body>
+</html>
