@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tea Shop Using DOM Module</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Annanuku Oru Tea Podu</h1>
+
+    <button id="showproducts">Avaliable Products</button>
+
+    <div id="productcontainer"></div>
+    <div id="varietycontainer"></div>
+    <button id="paymentbtn">Payment</button>
+
+    <script>
+      const products = [
+        {
+          name: "Tea",
+          varieties: [
+            {
+              name: "Plain-Tea",
+              price: 20,
+            },
+            {
+              name: "Ginger-Tea",
+              price: 25,
+            },
+            {
+              name: "Masala-Tea",
+              price: 30,
+            },
+            {
+              name: "Sangupoo-Tea",
+              price: 20,
+            },
+          ],
+        },
+        {
+          name: "Coffee",
+          varieties: [
+            {
+              name: "Black-coffee",
+              price: 20,
+            },
+            {
+              name: "Filter-Coffee",
+              price: 30,
+            },
+            {
+              name: "Chocalate-Coffee",
+              price: 35,
+            },
+            {
+              name: "Brewster-Coffee",
+              price: 40,
+            },
+          ],
+        },
+        {
+          name: "Snacks",
+          varieties: [
+            {
+              name: "Chicken-puffs",
+              price: 35,
+            },
+            {
+              name: "Mushroom-puffs",
+              price: 30,
+            },
+            {
+              name: "veg-puffs",
+              price: 20,
+            },
+          ],
+        },
+      ];
+
+      const showProductsBtn = document.getElementById("showproducts");
+      const productContainer = document.getElementById("productcontainer");
+      const varietyContainer = document.getElementById("varietycontainer");
+      const paymentBtn = document.getElementById("paymentbtn");
+      
+      let selectedVariety = null;
+      paymentBtn.style.display = "none";
+
+      showProductsBtn.addEventListener("click",()=>{
+            productContainer.innerHTML = "";
+            varietyContainer.innerHTML = "";
+            paymentBtn.style.display = "none";
+            selectedVariety = null;
+      });
+
+      products.forEach(function(product) {
+        const btn = document.createElement('button');
+        btn.textContent = product.name;
+
+        btn.addEventListener('click', function() {
+          showVarieties(product.varieties);
+        });
+
+        productContainer.appendChild(btn);
+      });
+    
+
+    function showVarieties(varieties) {
+      varietyContainer.innerHTML = "";
+      paymentBtn.style.display = 'none';
+      selectedVariety = null;
+
+      varieties.forEach(function(item) {
+        const btn = document.createElement('button');
+        btn.textContent = item.name + " - ₹" + item.price;
+
+        btn.addEventListener('click', function() {
+          selectedVariety = item;
+          paymentBtn.textContent = "Pay ₹" + item.price + " for " + item.name;
+          paymentBtn.style.display = 'block';
+        });
+
+        varietyContainer.appendChild(btn);
+      });
+    }
+
+    paymentBtn.addEventListener('click', function() {
+      if (selectedVariety) {
+        alert("Your payment is received and will give the product shortly");
+        paymentBtn.style.display = 'none';
+      }
+    });
+      
+
+    </script>
+  </body>
+</html>
