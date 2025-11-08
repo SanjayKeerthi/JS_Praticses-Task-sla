@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticses</title>
+</head>
+<body>
+    <h1>Image Search Generator</h1>
+    <p id="result"></p>
+    <input type="text" id="inputdatas" placeholder="Enter Name">
+    <button id="res">Generate</button>
+    <img src="" id="images" alt="">
+
+    <script>
+        const button = document.getElementById("res")
+        
+
+        button.addEventListener("click",(e)=>{
+            const datas = document.getElementById("inputdatas").value.trim()
+            const images_Result = document.getElementById("images")
+            const para = document.getElementById("result")
+            const data = datas.toLowerCase();
+
+            if(datas==="ajith"){
+                para.textContent = "Your Search Result : Ajith";
+                images_Result.src = "Assets/ajith.jpg"     
+            }
+            else if(datas==="Vijay"){
+                para.textContent = "Your Search Result : Vijay";
+                images_Result.src = "Assets/vijay.jpg"
+            }
+            else if(datas==="vikram"){
+                para.textcontent = "Your Search Result : Vikram"
+                images_Result.src = "Assets/vikram.jpg"
+            }
+            else if(datas==="Rajini"){
+                para.textContent = "Your Search Result : Rajini"
+                images_Result.src = "Assets/rajini.jpg"
+            }
+            else if(datas==="Kamal"){
+                para.textContent = "Your Search Result : Kamal"
+                images_Result.src = "Assets/kamal.jpg"
+            }
+            else if(datas==="SivaKarthikeyan"){
+                para.textContent = "Your Search Result : SivaKarthikeyan"
+                images_Result.src = "Assets/sivakarthikeyan.jpg"
+            }
+            else if(datas==="VishnuVishal"){
+                para.textContent = "Your Search Result : VishnuVishal"
+                images_Result.src = "Assets/vishnuvishal.jpg"
+            }
+             else if(datas==="Surya"){
+                para.textContent = "Your Search Result : Surya"
+                images_Result.src = "Assets/surya.jpg"
+            }
+             else if(datas==="Karthi"){
+                para.textContent = "Your Search Result : Karthi"
+                images_Result.src = "Assets/karthi.webp"
+            }
+             else if(datas==="Nani"){
+                para.textContent = "Your Search Result : Nani"
+                images_Result.src = "Assets/nani.jpg"
+            }
+            else{
+                para.textContent=`Your search data:${datas} is not found`
+                images_Result = "";
+            }
+
+        })
+    </script>
+</body>
+</html>

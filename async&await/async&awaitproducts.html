@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aysnc&Await</title>
+</head>
+<body>
+    <h2>Product List</h2>
+    <div id ="pro"></div>
+
+    <script>
+        const getdata = async()=>{
+            try{
+                console.log("Fetching datas");
+                const data = await fetch("https://dummyjson.com/recipes?limit=10")
+                const result = await data.json()
+                const datas = result.recipes
+                const container = document.getElementById("pro")
+                datas.forEach(item =>{
+                    const box = document.createElement("div")
+
+                box.innerHTML = `<h2>${item.name}</h2>
+                <p><b>Cuisine:</b>${item.cuisine}</p>`
+                container.appendChild(box)
+                })
+                
+            }
+            catch(err){
+                console.log("Something went wrong",err);
+                
+            }
+            finally{
+                console.log("Sucessfully completed");
+                
+            }
+        }
+        getdata()
+    </script>
+</body>
+</html>

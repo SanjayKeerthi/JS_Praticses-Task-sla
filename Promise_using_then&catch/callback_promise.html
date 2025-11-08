@@ -1,0 +1,26 @@
+<script>
+    function checknumber(num,callback){
+        if(num%2==0){
+            console.log("Its Even Number");
+        }
+        else{
+            console.log("Its odd");
+            
+        }
+    }
+
+    let promise = new Promise((resolve,reject)=>{
+        checknumber(10,(error,result)=>{
+            if(error){
+                reject(error)
+            }
+            else{
+                resolve(result)
+            }
+        })
+    })
+
+    promise
+    .then(console.log)
+    .catch(console.error)
+</script>

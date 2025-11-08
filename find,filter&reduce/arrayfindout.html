@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Found out first element</title>
+</head>
+<body>
+    <script>
+        let numbers = [10,20,30,40,50];
+        let first = numbers.find((num)=>num>0)
+        console.log("The geratest number is : ", first);
+        
+        let fruit = ["Apple" , "Banana" , "Grapes" , "Cranberry"];
+        let ans = fruit[0].charAt(0);
+        console.log(ans);
+
+        let nums = [100, 200, 300];
+        let firstElem = nums.slice(0, 1);
+        console.log("First element using slice():", firstElem[0]);
+
+        let arr = [9, 8, 7, 6];
+        console.log("First element:", arr[0]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synatx praticses</title>
+</head>
+<body>
+    <script>
+    <!-- <-----------Template Literals-------------->  -->
+    //Template Literal Synatx
+
+        // `string text ${Expression} string text`
+        // `string text ${Expression} string text`
+        // `string text ${Expression} string text`
+        // `string text ${Expression} string text`
+        // `string text ${Expression} string text`
+        // `string text ${Expression} string text`
+        // `string text ${Expression} string text`
+        // `string text ${Expression} string text`
+        // `string text ${Expression} string text`
+        // `string text ${Expression} string text`
+        // `string text ${Expression} string text`
+        // `string text ${Expression} string text`
+
+        //Examples in Template Literals
+
+        console.log(`--------------Template literals----------------------`);
+        
+
+        let name = "Sanjay";
+        console.log( `welcome ${name} to Javascript`);
+
+        let a = 5
+        let b = 5
+        let c = a+b
+        console.log(`The sum of  ${a} & ${b} is ${c}`);
+
+        let para =
+       `I am line one
+        I am line two
+        I am line three`
+        console.log(para);
+
+        let firstName = `Sanjay`;
+        let lastName = `Keerthi`;
+        let fullName = `${firstName} ${lastName}`;
+        console.log(fullName);
+
+        let movie = `Bison`
+        console.log(`The movie ${movie} is directed by Mariselvaraj`);
+
+        let num1 = 10;
+        let num2 = 30;
+        let result = num2-num1;
+        console.log(`The result of ${num2} subtracted from ${num1} is : ${result}`);
+
+
+        let company = `Audi`
+        let service = `49000`
+        console.log(`The ${company} service cost is ${service}`);
+
+        let temple = function(a){
+            console.log(`This is ${a} Temple `);
+        }
+        temple("Sabarimalai")
+
+        let age = 20 
+        if(age<30){
+            console.log(`Age Limit permitted above ${age}`);
+        }
+
+        else{
+            console.log(`You are permitted`);
+            
+        }
+
+        let beach = `Besant Nagar Beach`
+        let climate = `Rainy`
+        console.log(`We cannot go to ${beach} because it is ${climate}`);
+        
+
+        let season = (Tasty)=>{
+            console.log(`This is ${Tasty} season it is so tasty`);
+        }
+        season(`Mango`)
+
+        let command = `Follow the rules 
+        correctly and wisely
+        otherwise you will be eliminated`
+        console.log(command);
+
+
+        console.log(`----------Ternary Operator-------------`);
+
+        //Ternary Operator Syntax
+
+        // condition? expression_if_true:expression_if_false
+        // condition? expression_if_true:expression_if_false
+        // condition? expression_if_true:expression_if_false
+        // condition? expression_if_true:expression_if_false
+        // condition? expression_if_true:expression_if_false
+        // condition? expression_if_true:expression_if_false        
+        // condition? expression_if_true:expression_if_false
+        // condition? expression_if_true:expression_if_false
+        // condition? expression_if_true:expression_if_false
+        // condition? expression_if_true:expression_if_false
+        // condition? expression_if_true:expression_if_false
+        // condition? expression_if_true:expression_if_false
+
+        let number =  20
+        let agelimit = (number<21)? "Age should be above 21":"You can go inside"
+        console.log(agelimit);
+
+        let alpha = "I am sanjay"
+        console.log((alpha==="I am sanjay")? "You are sanjay":"You are not sanjay");
+        
+        let mark = 70
+        let exam_result = (mark>80)? "You are passed":"You are fail"        
+        console.log(exam_result);
+
+        let beta = 56
+        let beta_Results = (beta%2==0)? "Its Even Number" : "Its Odd number"
+        console.log(beta_Results);
+
+        let score = 70
+        let Exam_result = (score>80)? "A":
+                          (score<80)? "B":
+                          (score<50)? "C":"Fail"
+        console.log(Exam_result);
+
+        let loggedIn = true;
+        let message = loggedIn ? "Welcome back!":"Pls Login"
+        console.log(message);
+        
+        
+
+
+        
+        
+        
+        
+        
+
+        
+        
+    
+
+
+        
+
+
+        
+
+        
+        
+
+    </script>
+
+
+
+</body>
+</html>

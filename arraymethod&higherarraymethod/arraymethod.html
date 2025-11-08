@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method</title>
+</head>
+<body>
+    <script>
+        console.log("-------------Push-----------------");
+        
+        let arr = [1,2,3,4,5,6,7,8,9]
+         arr.push(1)//add element to last of array
+        console.log(arr);
+
+        let words = ["Apple" , "orange" , "watermelon" , "jackfruit" , "guava" , "berry"]
+        words.push("cranberry" , "grapes" , "Orange")
+        console.log(words);
+
+        let student = ["Sanjay" , 25 , "job seeker" , "chennai" , "pet-friendly" ]
+        student.push("searching for house")
+        console.log(student);
+
+        console.log("------------POP--------------");
+        
+
+        let actors = ["ajith" , "vijay" , "kamal" , "rajini" , "vikram" , "sivakarthikeyan"]
+        actors.pop()//delete the last element in array
+        console.log(actors);
+        
+        let numbers = [1,2,3,4,5,6,7,8]
+        numbers.pop()
+        console.log(numbers);
+
+        let movies = ["Bison" , "Dude" , "Diesel" , "Rocket" , "Soorarai Potru" , "Bahubali" , "Pattas"]
+        movies.pop()
+        console.log(movies);
+
+        console.log("---------shift-------------");
+
+        let crackers = ["rocket" , "skyshot" , "chakra" , "Flowerpot" , "10k-wala" , "Multi color shot"]
+        crackers.shift() //remove the first element in array
+        console.log(crackers);
+
+        let football = ["Argentina" , "South Africa" , "Japan" , "China" , "India"]
+        football.shift()
+        console.log(football);
+
+        let people = ["Tamil" , "Malayalam" , "Hindi" , "kannada" , "Telugu"]
+        people.shift();
+        console.log(people);
+
+        console.log("--------Unshift-------------");
+
+        let pongal = ["venpongal" , "sakkaraipongal" , "neipongal" , "kathiripongal" , "milagupongal"]
+        pongal.unshift("sweet potato pongal")//add element in the array at first posistion
+        console.log(pongal);
+
+        let phones = ["samsung","sony","iphone","micromax","lyf"]
+        phones.unshift("redmi","tcl")
+        console.log(phones);
+
+        let numeric = [1,2,3,4,5,6]
+        numeric.unshift(2,3,4);
+        console.log(numeric);
+        
+
+        console.log("------concat-------");
+
+        let boys = ["Ram" , "Som" , "Ragu" , "Ravi" , "Hari"]
+        let girls = ["Ragini" , "Sanjana" , "manjula", "Devi"]
+        let students = boys.concat(girls)//joining of two strings and numbers
+        console.log(students);
+
+        let team_1 = ["India" , "Bangaladesh" , "South Africa" , "West Indies"]
+        let team_2=team_1.concat("Italy","Rome" , "Japan" , "Malasiya")
+        console.log(team_2);
+        
+
+        let num = [1,2,3,4,5]
+        let num_2=num.concat(3,4,5,6,7)
+        console.log(num_2);
+
+        console.log("-------join-------");
+
+        let seperate = ["dam","dam","dam"]
+        let result=seperate.join("this");//joins are connect the each other
+        console.log(result);
+
+        let power = [1,2,3,4,5,6]
+        let ans = power.join("this are numbers");
+        console.log(ans);
+
+        let petrol = ["jio" , "BP" , "Reliance" , "jio"]
+        let log = petrol.join("This are petrol bunk :")
+        console.log(log);
+
+        console.log("-------Reverse--------");
+
+        let name = ["Sanjay" , "Pranav"]
+        name.reverse();
+        console.log(name);
+
+        let fun = ["karate" , "Skatting" , "linking"]
+        fun.reverse()
+        console.log(fun);
+
+        let numers = [1,2,3,4,5,6]
+        numers.reverse()
+        console.log(numers);
+        
+        console.log("-------slice--------");
+
+        let fruits = ["orange" , "pineapple" , "kiwi" , "berry" , "sapotta"]
+        let answer=fruits.slice(1,3)
+        console.log(answer);
+
+        let vegetables = ["cucumber" , "carrot" , "beans" , "beetroot" , "turnip"]
+        let answers_1=vegetables.slice(2,4)
+        console.log(answers_1);
+        
+        let tv = ["serials" , "comedy" , "fun" , "ads"]
+        let result_3=tv.slice(2)
+        console.log(result_3);
+        
+
+        console.log("-----splice-----");
+        let fruitss = ["Apple", "Banana", "Mango"];
+        fruitss.splice(1, 0, "Orange");
+        console.log(fruitss);
+
+        let numberss = [10, 20, 30, 40, 50];
+        numberss.splice(2, 2);
+        console.log(numberss);
+
+
+        let colors = ["Red", "Green", "Blue"];
+        colors.splice(1, 1, "Yellow");
+        console.log(colors);
+
+        let animals = ["Dog", "Cat", "Lion", "Tiger"];
+        let removed = animals.splice(2, 1);
+        console.log("Updated:", animals);
+        console.log("Removed:", removed);
+
+        console.log("------indexof------")
+        
+        let fruitts = ["Apple", "Banana", "Mango", "Orange"];
+        console.log(fruitts.indexOf("Mango"));
+
+        let numberrs = [10, 20, 30, 40];
+        console.log(numberrs.indexOf(50));
+
+        let colorss = ["Red", "Blue", "Red", "Green"];
+        console.log(colorss.indexOf("Red"));
+
+        let items = ["Pen", "Pencil", "Book"];
+        console.log(items.indexOf("pen"));
+
+        let mixed = [1, "one", true, null];
+        console.log(mixed.includes(true));
+
+        let values = [10, 20, NaN, 40];
+        console.log(values.includes(NaN));
+
+        let skills = ["HTML", "CSS", "JavaScript"];
+if (skills.includes("JavaScript")) {
+    console.log("You are a web developer!");
+} else {
+    console.log("Keep learning!");
+}
+
+
+ 
+
+        
+                
+        
+        
+
+
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+    </script>
+</body>
+</html>

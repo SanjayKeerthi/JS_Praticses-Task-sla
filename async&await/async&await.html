@@ -1,0 +1,51 @@
+<script>
+    const data = async()=>{
+
+        try{
+            console.log("Fetch necessary details");
+            const input = await fetch("https://dummyjson.com/products?")
+            const details = await input.json()
+            console.log(details.products);
+            
+            
+        }
+        catch(error){
+            console.error("something went wrong",error);
+            
+        }
+        finally{
+            console.log("Successfully completed");
+            
+        }
+    }
+    data()
+
+
+
+
+//     const getdata = async()=>{
+
+//     try{
+
+//         console.log('Fetching datas');
+
+//         const res = await fetch("https://dummyjson.com/products")
+//         const data = await res.json()
+//         console.log(data.products);
+        
+
+//     }catch(err){
+
+//         console.error('Somethng error',err);
+        
+
+//     }finally{
+//         console.log('process compelted');
+        
+//     }
+
+// } 
+
+
+// getdata()
+</script>

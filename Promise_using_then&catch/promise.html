@@ -1,0 +1,186 @@
+<script>
+    let promise = new Promise((resolve,reject)=>{
+    let success=true
+        if(success){
+            resolve("Task completed successfully");
+        }
+        else{
+            reject("Failed")
+        }
+    });
+    promise.then((msg)=>{
+        console.log(msg);
+   
+    })
+     promise.catch((error)=>{
+        console.log(error);
+        
+    })
+
+   let anbu = new Promise((res, rej) => {
+    let movie = false;
+    if (movie) {
+        res("This is Vadachennai");
+    } else {
+        rej("This is not swag movie");
+    }
+});
+
+anbu
+  .then((msg) => {
+      console.log("Vettrimaran swag movie:", msg);
+  })
+  .catch((err) => {
+      console.log("This is mokka movie:", err);
+  });
+
+  let data = new Promise((resolve,reject)=>{
+    console.log("Its in process!!!!");
+    
+    setTimeout(()=>{
+        let value = true
+        if(value){
+            console.log("Its fetched sucessfully!");
+        }
+        else{
+            console.log("Its failed!");
+            
+        }
+
+    },3000)
+  });
+
+  data
+  .then((msg)=>{
+    console.log(msg);
+})
+.catch((error)=>{
+    console.log(error);
+})
+
+let task1 = new Promise(res => setTimeout(() => res("Task 1 done"), 1000));
+let task2 = new Promise(res => setTimeout(() => res("Task 2 done"), 1500));
+Promise.all([task1, task2]).then(console.log);
+
+let p13 = new Promise(res => res("Step 1"));
+p13.then(msg => {
+  console.log(msg);
+  return new Promise(res => res("Step 2"));
+}).then(console.log);
+
+let p1 = new Promise((res, rej) => {
+  let done = true;
+  done ? res("Homework done!") : rej("Homework not done!");
+});
+p1.then(msg => console.log(msg), err => console.log(err));
+
+let bulb = new Promise((resolve,reject)=>{
+let glow = true
+glow ? resolve("Its working"):reject("Its not working")
+})
+bulb.then((msg)=>{console.log(msg);
+})
+.catch((error)=>{
+    console.log(error);
+    
+})
+
+let p15 = new Promise((res, rej) => {
+  let temp = 32;
+  temp < 35 ? res("Weather is Cool 🌤️") : rej("Too Hot 🔥");
+});
+p15.then(msg => console.log(msg), err => console.log(err));
+
+let p14 = new Promise((res, rej) => {
+  let present = false;
+  present ? res("You are Present ✅") : rej("You are Absent ❌");
+});
+p14.then(msg => console.log(msg), err => console.log(err));
+
+
+let p12 = new Promise((res, rej) => {
+  let level = 80;
+  level > 50 ? res("Tank Full ✅") : rej("Tank Empty 🚰");
+});
+p12.then(msg => console.log(msg), err => console.log(err));
+
+
+let p11 = new Promise((res, rej) => {
+  let paid = true;
+  paid ? res("Payment Successful 💳") : rej("Payment Failed ❌");
+});
+p11.then(msg => console.log(msg), err => console.log(err));
+
+
+let p10 = new Promise((res, rej) => {
+  let charged = true;
+  charged ? res("Phone Charged 🔋") : rej("Low Battery ⚡");
+});
+p10.then(msg => console.log(msg), err => console.log(err));
+
+
+let p9 = new Promise((res, rej) => {
+  let available = false;
+  available ? res("Ticket Booked 🎫") : rej("Sold Out 😞");
+});
+p9.then(msg => console.log(msg), err => console.log(err));
+
+
+let p8 = new Promise((res, rej) => {
+  let delivered = true;
+  delivered ? res("Food Delivered 🍔") : rej("Order Cancelled ❌");
+});
+p8.then(msg => console.log(msg), err => console.log(err));
+
+
+let p7 = new Promise((res, rej) => {
+  let light = false;
+  light ? res("Light is ON 💡") : rej("Light is OFF ❌");
+});
+p7.then(msg => console.log(msg), err => console.log(err));
+
+
+let p6 = new Promise((res, rej) => {
+  let balance = 1000;
+  balance > 500 ? res("Enough balance 💰") : rej("Low balance ⚠️");
+});
+p6.then(msg => console.log(msg), err => console.log(err));
+
+
+let p5 = new Promise((res, rej) => {
+  let sunny = true;
+  sunny ? res("Let's go out ☀️") : rej("Stay home 🌧️");
+});
+p5.then(msg => console.log(msg), err => console.log(err));
+
+
+let p4 = new Promise((res, rej) => {
+  let marks = 80;
+  marks >= 50 ? res("You Passed 🎉") : rej("You Failed 😢");
+});
+p4.then(msg => console.log(msg), err => console.log(err));
+
+
+let p3 = new Promise((res, rej) => {
+  let connected = false;
+  connected ? res("Online") : rej("No Internet");
+});
+p3.then(msg => console.log(msg), err => console.log(err));
+
+
+let p2 = new Promise((res, rej) => {
+  let user = "admin";
+  user === "admin" ? res("Login Successful") : rej("Login Failed");
+});
+p2.then(msg => console.log(msg), err => console.log(err));
+
+
+let prom = new Promise((res, rej) => {
+  let done = true;
+  done ? res("Homework done!") : rej("Homework not done!");
+});
+prom.then(msg => console.log(msg), err => console.log(err));
+
+
+
+</script>
