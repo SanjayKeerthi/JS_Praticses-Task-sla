@@ -1,0 +1,43 @@
+<div style="display: flex;justify-content: center;align-items: center;">
+<table border="4" cellpadding="25">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Problem</th>
+            <th>Where It Happens</th>
+            <th>How You Know</th>
+            <th>Review</th>
+        </tr>
+    </thead>
+    <tbody id="table"></tbody>
+</table>
+</div>
+
+<script>
+    const tabledata = localStorage.getItem("storedinfo");
+    const table = JSON.parse(tabledata) || [];
+
+    const showtable = document.getElementById("table");
+    let rows = "";
+
+    table.forEach((e, i) => {
+        rows += `
+        <tr>
+            <td>${i + 1}</td>
+            <td>${e.uname}</td>
+            <td>${e.mobile}</td>
+            <td>${e.mail}</td>
+            <td>${e.address}</td>
+            <td>${e.problem}</td>
+            <td>${e.incident}</td>
+            <td>${e.known}</td>
+            <td>${e.review}</td>
+        </tr>`;
+    });
+
+    showtable.innerHTML = rows;
+</script>

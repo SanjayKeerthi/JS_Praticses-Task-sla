@@ -8,10 +8,10 @@
 </head>
 <body>
     <h2>Problem Form</h2>
-    <div id="parent">
-    <form class="myform" id="form">
+    <div id="parent" class="parent">
+    <form class="form" id="form">
         <div class="data">
-        <label">Enter Your Name</label>
+        <label>Enter Your Name</label>
         <input type="text" placeholder="Enter Your Name" id="namebox">
         </div>
 
@@ -32,7 +32,7 @@
 
         <div class="data">
         <label>Enter Your Problem</label>
-        <textarea id="problembox"></textarea>
+        <textarea id="problembox" style="width: 200px;height: 40px;"></textarea>
         </div>
 
         <div class="data">
@@ -48,15 +48,61 @@
 
         <div class="data">
         <label>Review About Problem</label>
-        <textarea id="reviewbox"></textarea>
+        <textarea id="reviewbox"  style="width: 200px;height: 50px;"></textarea>
         </div>
 
-       <div class="data">        
-        <button type="submit" id="btn">Submit</button>
+        <div class="data">        
+        <button type="submit" id="btn" style="background-color: black;color: white;height: 25px;width: 50px ;">Submit</button>
         </div>
 
         <p id="para"></p>
     </form>
     </div>
+
+    <script>
+        const form = document.getElementById("form")
+        const message = document.getElementById("para")
+
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            const uname = document.getElementById("namebox").value
+            const mobile = document.getElementById("mobilebox").value
+            const mail = document.getElementById("mailbox").value
+            const address = document.getElementById("addressbox").value
+            const problem = document.getElementById("problembox").value
+            const known = document.getElementById("knowbox").value
+            const incident = document.getElementById("happenbox").value
+            const review = document.getElementById("reviewbox").value
+
+            if(!uname || !mobile || !mail || !address || !problem || !known || !incident || !review){
+            message.innerText = "Kindly Enter All Details"
+            message.style.color = "blue"
+            return;
+        }
+        else if(mobile.length!=10){
+            message.innerText = "Kindly Enter Valid Mobile Number"
+            message.style.color = "blue"
+            return;
+        }
+
+        const data = JSON.parse(localStorage.getItem("storedinfo")) || []
+        console.log(data);
+        const storedata = {uname,mobile,mail,address,problem,incident,known,review}
+        console.log(storedata);
+
+        data.push(storedata)
+        localStorage.setItem("storedinfo",JSON.stringify(data))
+        
+
+        alert("Successfully Completed !!!")
+        form.reset()
+        window.location.href = "table.html"
+        
+    })
+
+        
+    </script>
 </body>
 </html>
+
+
